@@ -16,7 +16,7 @@ def addNote():
     print("Заметка добавлена")
 
 def showNote(txt):
-    array_notes = 
+    return
 
 def delNote():
     return
