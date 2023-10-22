@@ -8,11 +8,12 @@ def start():
         if user_input == '1':
             com.addNote()
         elif user_input == '2':
-           break 
+           com.showNote("all")
+           com.changeNote() 
         elif user_input == '3':
             com.showNote("all")
         elif user_input == '4':
-            com.showNote("ID")
+            com.showNote("id")
         elif user_input == '5':
             com.showNote("date")
         elif user_input == '6':
@@ -20,3 +21,4 @@ def start():
             com.delNote()
         else:
             print("Программа завершина")
+            break

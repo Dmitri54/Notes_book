@@ -1,17 +1,8 @@
+import UI.menuTemplate as m
 
 def userConsole():
-    printMenuTitle("Главное меню\n         Книга заметок")
-    print("1 - Добавить \n2 - Редактировать \n3 - Вывод всех заметок \n4 - Поиск по ID" 
+    m.printMenuTitle("Главное меню\n         КНИГА ЗАМЕТОК")
+    print("1 - Добавить \n2 - Редактировать \n3 - Вывод всех \n4 - Поиск по id" 
           " \n5 - Поиск по дате \n6 - Удалить \n7 - Выход")
-    printEmtyLine()
-    print("Выберите пункт")
-
-
-
-def printMenuTitle(textMenu):
-    print("==============================")
-    print("        ", textMenu)
-    print("==============================")
-
-def printEmtyLine():
-    print("==============================")
+    m.printEmtyLine()
+    print("\n Выберите пункт")

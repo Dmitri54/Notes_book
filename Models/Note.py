@@ -26,11 +26,11 @@ class Note:
     def set_id(note):
         note.id = str(counter.counter())
 
-    def set_title(note, title):
-        note.title = title
+    def set_title(note):
+        note.title = note
 
-    def set_body(note, body):
-        note.body = body 
+    def set_body(note):
+        note.body = note 
     
     def set_date(note):
         note.date = str(datetime.now().strftime("%d.%m.%Y %H:%M:%S"))
@@ -39,4 +39,4 @@ class Note:
         return note.id + ';' + note.title + ';' + note.body + ';' + note.date
     
     def map_note(note):
-        return '\nID: ' + note.id + '\n' + 'Название: ' + note.title + '\n' + 'Описание: ' + note.body + '\n' + 'Дата создания: ' + note.date
+        return '\n id: ' + note.id + '\n' + 'Название: ' + note.title + '\n' + 'Описание: ' + note.body + '\n' + 'Дата создания: ' + note.date
