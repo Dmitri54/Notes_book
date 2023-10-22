@@ -1,11 +1,10 @@
 from datetime import datetime
-# import uuid 
 import Controller.counter as counter
 
 
 class Note:
-    def __init__(self, id = str(counter.counter()), title = "текст", body = "текст", date = 
-                 str(datetime.now().strftime("%d.%m.%Y %H:%M:%S"))):
+    def __init__(self, id = str(counter.counter()), title="текст", body="текст", 
+                 date=str(datetime.now().strftime("%d.%m.%Y %H:%M:%S"))):
         self.id = id
         self.title = title
         self.body = body
