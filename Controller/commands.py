@@ -20,14 +20,14 @@ def showNote(txt):
 
     if array_notes:
         if txt == 'all':
-            print("Книга заметок:")
+            print("КНИГА ЗАМЕТОК:")
             for i in array_notes:
                 print(Models.Note.Note.map_note(i))
 
         elif txt == 'id':
             for i in array_notes:
                 print("id: ", Models.Note.Note.get_id(i))
-            id = input("Введите id заметки: ")
+            id = input("\nВведите id заметки: ")
             flag = True
             for i in array_notes:
                 if id == Models.Note.Note.get_id(i):
@@ -59,7 +59,8 @@ def delNote():
             array_notes.remove(i)
             flag = True
     if flag:
-        print("Заметка с id:", id, "удалена")
+        wF.write_file(array_notes, 'a')
+        print("Заметка с id:", id, "удалена!")
     else:
         print("Нет такого id.")
 
@@ -72,12 +73,12 @@ def changeNote():
         if id == Models.Note.Note.get_id(i):
             i.title = input("Изменить заголовок: ")
             i.body = input("Изменить описание: ")
-            Models.Note.Note.get_date(i)
+            Models.Note.Note.set_date(i)
             logic = False
         array_notes_new.append(i)
 
     if flag: 
         wF.write_file(array_notes_new, 'a')
-        print("Заметка с id: ", id, "успешно изменина")
+        print("Заметка с id:", id, "успешно изменина.")
     else:
-        print("Нет такого id")
+        print("Нет такого id.")
